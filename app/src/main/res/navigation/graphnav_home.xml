@@ -1,25 +1,32 @@
-<?xml
-    version="1.0"
-    encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <navigation
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/graphnav_home"
     app:startDestination="@id/tracksFragment">
+
+    <action
+        android:id="@+id/actionHomeToSettingsFragment"
+        app:destination="@id/settingsFragment" />
+
     <fragment
         android:id="@+id/albumsFragment"
-        android:name="es.unex.giiis.asee.spotifilter.view.home.AlbumsFragment"
-        android:label="Albums"
-        tools:layout="@layout/fragment_albums" />
-    <fragment
-        android:id="@+id/tracksFragment"
-        android:name="es.unex.giiis.asee.spotifilter.view.home.TracksFragment"
-        android:label="Tracks"
-        tools:layout="@layout/fragment_tracks" />
+        android:name="es.unex.giiis.asee.spotifilter.view.home.fragment.albums.AlbumsFragment"
+        android:label="Albums" />
+
     <fragment
         android:id="@+id/playlistsFragment"
-        android:name="es.unex.giiis.asee.spotifilter.view.home.PlaylistsFragment"
-        android:label="Playlists"
-        tools:layout="@layout/fragment_playlists" />
+        android:name="es.unex.giiis.asee.spotifilter.view.home.fragment.playlists.PlaylistsFragment"
+        android:label="Playlists" />
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="es.unex.giiis.asee.spotifilter.view.home.fragment.SettingsFragment"
+        android:label="Settings" />
+
+    <fragment
+        android:id="@+id/tracksFragment"
+        android:name="es.unex.giiis.asee.spotifilter.view.home.fragment.tracks.TracksFragment"
+        android:label="Tracks" />
+
 </navigation>
