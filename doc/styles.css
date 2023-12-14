@@ -62,58 +62,6 @@ h2{
     color: aliceblue;
 }
 
-#botonSubir{
-position: fixed;
-bottom: 0;
-right: 0;
-background-color: #333;
-color: white;
-padding: 10px;
-}
-
-#botonSubir a{
-    text-decoration: none;
-    color: white;
-    font-size: 5rem;
-}
-
-#botonSubir a:hover{
-    background-clip: text;
-    background: linear-gradient(to right, white, yellow);
-    -webkit-background-clip: text;
-    color: transparent;
-}
-#botonSubir a:active{
-    opacity: 0.7;
-}
-
-.sections{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-
-
- #listFunc h4{
-    text-align: justify;
-    color:rgb(0, 0, 0);
-    background-color: #ffffff;
-    padding: 40px;
-    border-radius: 10px;
-    margin: 20px;
- }
-
- #listFunc h2 {
-    text-align: center;
- }
-
- .contenedor {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
 
 #footer {
     background: linear-gradient(to right, #333,#000);
@@ -137,3 +85,48 @@ padding: 10px;
     height: auto; 
     
 }
+
+#devTeam h2{
+   text-align: center;
+   }
+
+#devTeam ul{
+ list-style: none;
+}
+
+#devTeam .perfiles{
+    color: aliceblue;
+    
+}
+
+.sections {
+    text-align: center;
+}
+
+#devTeam {
+    margin: 20px;
+}
+
+.matriz-perfiles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.perfiles {
+    width: 48%; /* Ajusta el ancho según tus necesidades */
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: left; /* Ajusta el alineamiento del texto según tus necesidades */
+}
+
+.perfil {
+    width: 100px; /* Ajusta el tamaño de la imagen según tus necesidades */
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+
