@@ -17,7 +17,7 @@ interface TrackDao {
 
     @Query("SELECT * FROM track JOIN playlisttrack ON id = trackid " +
             "WHERE playlistid = :playlistId AND artists LIKE '%' || :artists || '%' " +
-            "ORDER BY popularity ASC")
+            "ORDER BY popularity DESC")
     suspend fun findByPlaylistIdOrderByPopularity(playlistId: Long?, artists: String): List<Track>
 
     @Query("SELECT * FROM track JOIN playlisttrack ON id = trackid " +
