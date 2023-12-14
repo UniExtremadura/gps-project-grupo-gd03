@@ -60,6 +60,29 @@ class AddTrackToPlaylistFragment : Fragment() {
         }
     }
 
+    private suspend fun addTrackToNewPlaylist() {
+        val name = binding.addTrackToPlaylistPlainText.text.toString()
+        val track = args.track
+        if (name.isBlank()) {
+            Toast.makeText(context, "Invalid playlist's name", Toast.LENGTH_SHORT)
+                .show()
+        } else if (database.playlistDao().findByNameAndUserId(name, user.id) != null) {
+            Toast.makeText(context, "Playlist '$name' already exists", Toast.LENGTH_SHORT)
+                .show()
+        } else {
+            val playlist = Playlist(null, name, user.id!!)
+            playlist.id = database.playlistDao().insert(playlist)
+            val playlistTrack = PlaylistTrack(playlist.id!!, track.id)
+            database.playlistTrackDao().insert(playlistTrack)
+            if (database.trackDao().findById(track.id) == null) {
+                database.trackDao().insert(track)
+            }
+            updateRecyclerView()
+            Toast.makeText(context, "Playlist '$name' created with '${track.name}'",
+                Toast.LENGTH_SHORT).show()
+        }
+    }
+
     private suspend fun addTrackToPlaylist(playlist: Playlist) {
         val track = args.track
         if (database.playlistTrackDao()
@@ -81,7 +104,7 @@ class AddTrackToPlaylistFragment : Fragment() {
     private fun setUpListeners() {
         binding.addTrackToPlaylistButton.setOnClickListener {
             lifecycleScope.launch {
-                //addTrackToNewPlaylist()
+                addTrackToNewPlaylist()
             }
         }
     }
