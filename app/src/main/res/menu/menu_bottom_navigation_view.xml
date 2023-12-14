@@ -1,25 +1,27 @@
-<?xml
-    version="1.0"
-    encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <menu
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+
     <item
         android:id="@+id/tracksFragment"
         android:enabled="true"
         android:icon="@drawable/icon_tracks"
         android:title="Tracks"
         app:showAsAction="ifRoom" />
+
     <item
         android:id="@+id/albumsFragment"
         android:enabled="true"
         android:icon="@drawable/icon_albums"
         android:title="Albums"
         app:showAsAction="ifRoom" />
+
     <item
         android:id="@+id/playlistsFragment"
         android:enabled="true"
         android:icon="@drawable/icon_playlists"
         android:title="Playlists"
         app:showAsAction="ifRoom" />
+
 </menu>
