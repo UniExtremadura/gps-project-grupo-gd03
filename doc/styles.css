@@ -94,6 +94,7 @@ padding: 10px;
 }
 
 
+
  #listFunc h4{
     text-align: justify;
     color:rgb(0, 0, 0);
@@ -113,24 +114,6 @@ padding: 10px;
     flex-wrap: wrap;
 }
 
-.pantalla {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    max-width: 45%; 
-    margin: 20px;
-}
-
-.pantallasIzq {
-    width: 300px; 
-    height: auto; 
-}
-
-.pantallasDer {
-    width: 300px; 
-    height: auto; 
-}
 
 #footer {
     background: linear-gradient(to right, #333,#000);
@@ -154,4 +137,3 @@ padding: 10px;
     height: auto; 
     
 }
-
