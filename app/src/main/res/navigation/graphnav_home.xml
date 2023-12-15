@@ -13,8 +13,7 @@
     <fragment
         android:id="@+id/addTrackToPlaylistFragment"
         android:name="es.unex.giiis.asee.spotifilter.view.home.fragment.AddTrackToPlaylistFragment"
-        android:label="Add track to playlist"
-        tools:layout="@layout/fragment_add_track_to_playlist" >
+        android:label="Add track to playlist" >
 
         <argument
             android:name="track"
@@ -25,20 +24,11 @@
     <fragment
         android:id="@+id/albumDetailsFragment"
         android:name="es.unex.giiis.asee.spotifilter.view.home.fragment.albums.AlbumDetailsFragment"
-        android:label="Album details"
-        tools:layout="@layout/fragment_album_details" >
+        android:label="Album details" >
 
         <argument
             android:name="album"
             app:argType="es.unex.giiis.asee.spotifilter.data.model.Album" />
-
-        <action
-            android:id="@+id/actionAlbumDetailsFragmentToAddTrackToPlaylistFragment"
-            app:destination="@id/addTrackToPlaylistFragment" />
-
-        <action
-            android:id="@+id/actionAlbumDetailsFragmentToTrackDetailsFragment"
-            app:destination="@id/trackDetailsFragment" />
 
     </fragment>
 
@@ -55,27 +45,9 @@
     </fragment>
 
     <fragment
-        android:id="@+id/playlistDetailsFragment"
-        android:name="es.unex.giiis.asee.spotifilter.view.home.fragment.playlists.PlaylistDetailsFragment"
-        android:label="Playlist details" >
-
-        <argument
-            android:name="playlist"
-            app:argType="es.unex.giiis.asee.spotifilter.data.model.Playlist" />
-
-    </fragment>
-
-    <fragment
         android:id="@+id/playlistsFragment"
         android:name="es.unex.giiis.asee.spotifilter.view.home.fragment.playlists.PlaylistsFragment"
-        android:label="Playlists"
-        tools:layout="@layout/fragment_playlists" >
-
-        <action
-            android:id="@+id/actionPlaylistsFragmentToPlaylistDetailsFragment"
-            app:destination="@id/playlistDetailsFragment" />
-
-    </fragment>
+        android:label="Playlists" />
 
     <fragment
         android:id="@+id/settingsFragment"
@@ -85,8 +57,7 @@
     <fragment
         android:id="@+id/trackDetailsFragment"
         android:name="es.unex.giiis.asee.spotifilter.view.home.fragment.tracks.TrackDetailsFragment"
-        android:label="Track details"
-        tools:layout="@layout/fragment_track_details" >
+        android:label="Track details" >
 
         <argument
             android:name="track"

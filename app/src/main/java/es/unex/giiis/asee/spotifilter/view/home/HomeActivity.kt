@@ -121,12 +121,6 @@ class HomeActivity : AppCompatActivity(), UserProvider {
                     binding.toolbar.menu.findItem(R.id.actionSettings).isVisible = true
                     binding.bottomNavigationView.visibility = View.VISIBLE
                 }
-                R.id.addTrackToPlaylistFragment, R.id.albumDetailsFragment,
-                R.id.playlistDetailsFragment, R.id.trackDetailsFragment -> {
-                    binding.toolbar.menu.findItem(R.id.actionSearch).isVisible = false
-                    binding.toolbar.menu.findItem(R.id.actionSettings).isVisible = true
-                    binding.bottomNavigationView.visibility = View.GONE
-                }
                 else -> {
                     binding.toolbar.menu.findItem(R.id.actionSearch).isVisible = true
                     binding.toolbar.menu.findItem(R.id.actionSettings).isVisible = true
