@@ -54,9 +54,27 @@
     </fragment>
 
     <fragment
+        android:id="@+id/playlistDetailsFragment"
+        android:name="es.unex.giiis.asee.spotifilter.view.home.fragment.playlists.PlaylistDetailsFragment"
+        android:label="Playlist details" >
+
+        <argument
+            android:name="playlist"
+            app:argType="es.unex.giiis.asee.spotifilter.data.model.Playlist" />
+
+    </fragment>
+
+    <fragment
         android:id="@+id/playlistsFragment"
         android:name="es.unex.giiis.asee.spotifilter.view.home.fragment.playlists.PlaylistsFragment"
-        android:label="Playlists" />
+        android:label="Playlists"
+        tools:layout="@layout/fragment_playlists" >
+
+        <action
+            android:id="@+id/actionPlaylistsFragmentToPlaylistDetailsFragment"
+            app:destination="@id/playlistDetailsFragment" />
+
+    </fragment>
 
     <fragment
         android:id="@+id/settingsFragment"
