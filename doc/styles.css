@@ -114,24 +114,6 @@ padding: 10px;
     flex-wrap: wrap;
 }
 
-.pantalla {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    max-width: 45%;
-    margin: 20px;
-}
-
-.pantallasIzq {
-    width: 300px;
-    height: auto;
-}
-
-.pantallasDer {
-    width: 300px;
-    height: auto;
-}
 
 #footer {
     background: linear-gradient(to right, #333,#000);
@@ -155,3 +137,48 @@ padding: 10px;
     height: auto; 
     
 }
+
+#devTeam h2{
+   text-align: center;
+   }
+
+#devTeam ul{
+ list-style: none;
+}
+
+#devTeam .perfiles{
+    color: aliceblue;
+
+}
+
+.sections {
+    text-align: center;
+}
+
+#devTeam {
+    margin: 20px;
+}
+
+.matriz-perfiles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.perfiles {
+    width: 48%; /* Ajusta el ancho según tus necesidades */
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: left; /* Ajusta el alineamiento del texto según tus necesidades */
+}
+
+.perfil {
+    width: 100px; /* Ajusta el tamaño de la imagen según tus necesidades */
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+
