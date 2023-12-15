@@ -12,6 +12,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
+import es.unex.giiis.asee.spotifilter.R
 import es.unex.giiis.asee.spotifilter.api.SpotifyAPIError
 import es.unex.giiis.asee.spotifilter.api.SpotifyAccountsError
 import es.unex.giiis.asee.spotifilter.data.model.PlaylistTrack
@@ -102,6 +103,12 @@ class PlaylistDetailsFragment : Fragment() {
             updateRecyclerView()
         }
         binding.playlistDetailsRadioButton1.isChecked = true
+        binding.playlistDetailsRadioGroup.setOnCheckedChangeListener { _, checkedId ->
+            when (checkedId) {
+                R.id.playlistDetailsRadioButton1, R.id.playlistDetailsRadioButton2
+                -> updateRecyclerView()
+            }
+        }
     }
 
     private fun updateRecyclerView() {
