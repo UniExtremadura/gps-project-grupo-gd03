@@ -24,11 +24,20 @@
     <fragment
         android:id="@+id/albumDetailsFragment"
         android:name="es.unex.giiis.asee.spotifilter.view.home.fragment.albums.AlbumDetailsFragment"
-        android:label="Album details" >
+        android:label="Album details"
+        tools:layout="@layout/fragment_album_details" >
 
         <argument
             android:name="album"
             app:argType="es.unex.giiis.asee.spotifilter.data.model.Album" />
+
+        <action
+            android:id="@+id/actionAlbumDetailsFragmentToAddTrackToPlaylistFragment"
+            app:destination="@id/addTrackToPlaylistFragment" />
+
+        <action
+            android:id="@+id/actionAlbumDetailsFragmentToTrackDetailsFragment"
+            app:destination="@id/trackDetailsFragment" />
 
     </fragment>
 
