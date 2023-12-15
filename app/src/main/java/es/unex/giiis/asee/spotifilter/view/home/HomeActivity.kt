@@ -62,7 +62,7 @@ class HomeActivity : AppCompatActivity(), UserProvider {
                     when (val currentFragment =
                         navHostFragment?.childFragmentManager?.fragments?.get(0)) {
                         is AlbumsFragment -> {
-                            //currentFragment.updateRecyclerView(query!!)
+                            currentFragment.updateRecyclerView(query!!)
                         }
                         is TracksFragment -> {
                             currentFragment.updateRecyclerView(query!!)
@@ -74,7 +74,7 @@ class HomeActivity : AppCompatActivity(), UserProvider {
                     when (val currentFragment =
                         navHostFragment?.childFragmentManager?.fragments?.get(0)) {
                         is AlbumsFragment -> {
-                            //currentFragment.updateRecyclerView(newText!!)
+                            currentFragment.updateRecyclerView(newText!!)
                         }
                         is TracksFragment -> {
                             currentFragment.updateRecyclerView(newText!!)
@@ -120,6 +120,12 @@ class HomeActivity : AppCompatActivity(), UserProvider {
                     binding.toolbar.menu.findItem(R.id.actionSearch).isVisible = false
                     binding.toolbar.menu.findItem(R.id.actionSettings).isVisible = true
                     binding.bottomNavigationView.visibility = View.VISIBLE
+                }
+                R.id.addTrackToPlaylistFragment, R.id.albumDetailsFragment,
+                R.id.playlistDetailsFragment, R.id.trackDetailsFragment -> {
+                    binding.toolbar.menu.findItem(R.id.actionSearch).isVisible = false
+                    binding.toolbar.menu.findItem(R.id.actionSettings).isVisible = true
+                    binding.bottomNavigationView.visibility = View.GONE
                 }
                 else -> {
                     binding.toolbar.menu.findItem(R.id.actionSearch).isVisible = true

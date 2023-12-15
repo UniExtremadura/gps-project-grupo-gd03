@@ -7,8 +7,20 @@ import es.unex.giiis.asee.spotifilter.api.getSpotifyAccountsService
 import es.unex.giiis.asee.spotifilter.data.api.SpotifyAuthorization
 import es.unex.giiis.asee.spotifilter.data.api.tracks.SpotifyPlaylist
 import es.unex.giiis.asee.spotifilter.data.api.SpotifySearchResponse
+import es.unex.giiis.asee.spotifilter.data.api.albums.SpotifyAlbum
+import es.unex.giiis.asee.spotifilter.data.api.albums.SpotifyPagedSet
 import es.unex.giiis.asee.spotifilter.data.api.tracks.SpotifyTrack
+import es.unex.giiis.asee.spotifilter.data.api.tracks.SpotifyTracks
+import es.unex.giiis.asee.spotifilter.data.model.Album
 import es.unex.giiis.asee.spotifilter.data.model.Track
+
+fun SpotifyAlbum.toAlbum() = Album(
+    id = id ?: "",
+    artists = artists?.joinToString(separator = ", ") { it.name!! } ?: "",
+    image = images?.get(0)?.url ?: "",
+    name = name ?: "",
+    releaseDate = releaseDate ?: ""
+)
 
 suspend fun SpotifyTrack.toTrack(): Track {
     val track = Track(
@@ -43,6 +55,14 @@ fun SpotifyAuthorization.getAuthorization(): String {
     return "$tokenType $accessToken"
 }
 
+fun SpotifyPagedSet.getAlbums(): List<Album> {
+    val albumList = mutableListOf<Album>()
+    for (album in albums?.items!!) {
+        albumList.add(album.toAlbum())
+    }
+    return albumList
+}
+
 suspend fun SpotifyPlaylist.getTracks(): List<Track> {
     val trackList = mutableListOf<Track>()
     for (item in tracks?.items!!) {
@@ -51,9 +71,25 @@ suspend fun SpotifyPlaylist.getTracks(): List<Track> {
     return trackList
 }
 
+fun SpotifySearchResponse.getAlbums(): List<Album> {
+    val albumList = mutableListOf<Album>()
+    for (album in albums?.items!!) {
+        albumList.add(album.toAlbum())
+    }
+    return albumList
+}
+
 suspend fun SpotifySearchResponse.getTracks(): List<Track> {
     val trackList = mutableListOf<Track>()
     for (track in tracks?.items!!) {
+        trackList.add(track.toTrack())
+    }
+    return trackList
+}
+
+suspend fun SpotifyTracks.getTracks(): List<Track> {
+    val trackList = mutableListOf<Track>()
+    for (track in items!!) {
         trackList.add(track.toTrack())
     }
     return trackList
