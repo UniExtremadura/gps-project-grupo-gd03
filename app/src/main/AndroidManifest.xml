@@ -20,6 +20,9 @@
             android:name=".view.SignUpActivity"
             android:exported="false" />
         <activity
+            android:name=".view.home.HomeActivity"
+            android:exported="false" />
+        <activity
             android:name=".view.LogInActivity"
             android:exported="true">
             <intent-filter>
