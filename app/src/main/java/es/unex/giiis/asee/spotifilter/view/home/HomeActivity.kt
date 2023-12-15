@@ -65,7 +65,7 @@ class HomeActivity : AppCompatActivity(), UserProvider {
                             //currentFragment.updateRecyclerView(query!!)
                         }
                         is TracksFragment -> {
-                            //currentFragment.updateRecyclerView(query!!)
+                            currentFragment.updateRecyclerView(query!!)
                         }
                     }
                     return true
@@ -77,7 +77,7 @@ class HomeActivity : AppCompatActivity(), UserProvider {
                             //currentFragment.updateRecyclerView(newText!!)
                         }
                         is TracksFragment -> {
-                            //currentFragment.updateRecyclerView(newText!!)
+                            currentFragment.updateRecyclerView(newText!!)
                         }
                     }
                     return true

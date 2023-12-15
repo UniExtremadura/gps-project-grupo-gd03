@@ -34,7 +34,7 @@
                 android:text="SpotiFilter"
                 android:textColor="@color/orange"
                 android:textSize="25sp" />
-
+            
         </LinearLayout>
 
         <TextView
