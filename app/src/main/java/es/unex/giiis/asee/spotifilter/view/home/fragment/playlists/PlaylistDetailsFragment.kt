@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
@@ -36,7 +37,7 @@ class PlaylistDetailsFragment : Fragment() {
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?
+        savedInstanceState: Bundle?
     ): View {
         _binding = FragmentPlaylistDetailsBinding.inflate(inflater, container, false)
         return binding.root
@@ -96,6 +97,10 @@ class PlaylistDetailsFragment : Fragment() {
 
     private fun setUpUI() {
         binding.playlistDetailsTextView1.text = args.playlist.name
+        binding.playlistDetailsEditText.addTextChangedListener { editable ->
+            artists = editable.toString()
+            updateRecyclerView()
+        }
         binding.playlistDetailsRadioButton1.isChecked = true
     }
 
