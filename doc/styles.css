@@ -5,15 +5,15 @@ body {
     padding: 0;
     box-sizing: border-box;
     background-image: url('images/fondoprincipal.avif');
-    background-size: cover; 
+    background-size: cover;
     background-position: center center;
-    
+
 
 }
 
 header {
     background-image: url('images/fondo.webp');
-    background-size: cover; 
+    background-size: cover;
     background-position: center center;
     background-color: #333;
     color: white;
@@ -62,6 +62,121 @@ h2{
     color: aliceblue;
 }
 
+#botonSubir{
+position: fixed;
+bottom: 0;
+right: 0;
+background-color: #333;
+color: white;
+padding: 10px;
+}
+
+#botonSubir a{
+    text-decoration: none;
+    color: white;
+    font-size: 5rem;
+}
+
+#botonSubir a:hover{
+    background-clip: text;
+    background: linear-gradient(to right, white, yellow);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+#botonSubir a:active{
+    opacity: 0.7;
+}
+
+.sections{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#mailUs{
+    text-align: center;
+}
+
+#mailUs #logo{
+height: 20px;
+width: auto;
+}
+
+
+#mailUs #correo{
+    text-decoration: none;
+    background-color: #333;
+    color:#ffffff;
+    padding: 10px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+#mailUs  #correo:hover{
+    background-color: #5a5a5a;
+}
+
+#mailUs  #correo:active{
+    opacity: 0.7;
+}
+
+#mailUs h4{
+    margin-top: 30px;
+    color: aliceblue;
+}
+
+#mailUs .redes img{
+    height: 50px;
+    width: auto;
+    padding: 10px;
+}
+
+#mailUs .redes img:hover{
+   opacity: 0.7;
+}
+
+#mailUs .redes img:active{
+    opacity: 0.1;
+ }
+
+
+ #listFunc h4{
+    text-align: justify;
+    color:rgb(0, 0, 0);
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    margin: 20px;
+ }
+
+ #listFunc h2 {
+    text-align: center;
+ }
+
+ .contenedor {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.pantalla {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 45%;
+    margin: 20px;
+}
+
+.pantallasIzq {
+    width: 300px;
+    height: auto;
+}
+
+.pantallasDer {
+    width: 300px;
+    height: auto;
+}
 
 #footer {
     background: linear-gradient(to right, #333,#000);
@@ -71,19 +186,19 @@ h2{
 }
 
 #footer img{
-  
-    display: block; 
-    margin: 0 auto; 
+
+    display: block;
+    margin: 0 auto;
 }
 
 #footer #logo {
-    width: 100px; 
-    height: auto; 
+    width: 100px;
+    height: auto;
 }
 #footer #playstore {
-    width: 200px; 
-    height: auto; 
-    
+    width: 200px;
+    height: auto;
+
 }
 
 #devTeam h2{
@@ -96,7 +211,7 @@ h2{
 
 #devTeam .perfiles{
     color: aliceblue;
-    
+
 }
 
 .sections {
@@ -128,5 +243,3 @@ h2{
     border-radius: 50%;
     margin-bottom: 10px;
 }
-
-
