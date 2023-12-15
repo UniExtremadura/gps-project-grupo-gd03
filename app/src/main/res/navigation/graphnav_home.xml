@@ -13,7 +13,8 @@
     <fragment
         android:id="@+id/addTrackToPlaylistFragment"
         android:name="es.unex.giiis.asee.spotifilter.view.home.fragment.AddTrackToPlaylistFragment"
-        android:label="Add track to playlist" >
+        android:label="Add track to playlist"
+        tools:layout="@layout/fragment_add_track_to_playlist" >
 
         <argument
             android:name="track"
@@ -56,11 +57,16 @@
     <fragment
         android:id="@+id/playlistDetailsFragment"
         android:name="es.unex.giiis.asee.spotifilter.view.home.fragment.playlists.PlaylistDetailsFragment"
-        android:label="Playlist details" >
+        android:label="Playlist details"
+        tools:layout="@layout/fragment_playlist_details" >
 
         <argument
             android:name="playlist"
             app:argType="es.unex.giiis.asee.spotifilter.data.model.Playlist" />
+
+        <action
+            android:id="@+id/actionPlaylistDetailsFragmentToTrackDetailsFragment"
+            app:destination="@id/trackDetailsFragment" />
 
     </fragment>
 
@@ -84,7 +90,8 @@
     <fragment
         android:id="@+id/trackDetailsFragment"
         android:name="es.unex.giiis.asee.spotifilter.view.home.fragment.tracks.TrackDetailsFragment"
-        android:label="Track details" >
+        android:label="Track details"
+        tools:layout="@layout/fragment_track_details" >
 
         <argument
             android:name="track"
