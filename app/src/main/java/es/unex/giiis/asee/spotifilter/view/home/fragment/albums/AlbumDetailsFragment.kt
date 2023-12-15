@@ -32,7 +32,7 @@ class AlbumDetailsFragment : Fragment() {
     private val binding get() = _binding!!
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?
+        savedInstanceState: Bundle?
     ): View {
         _binding = FragmentAlbumDetailsBinding.inflate(inflater, container, false)
         return binding.root

@@ -115,8 +115,13 @@ class PlaylistDetailsFragment : Fragment() {
         val playlist = args.playlist
         try {
             lifecycleScope.launch {
-                _tracks = database.trackDao()
-                    .findByPlaylistIdOrderByReleaseDate(playlist.id, artists)
+                if (binding.playlistDetailsRadioButton1.isChecked) {
+                    _tracks = database.trackDao()
+                        .findByPlaylistIdOrderByReleaseDate(playlist.id, artists)
+                } else if (binding.playlistDetailsRadioButton2.isChecked) {
+                    _tracks = database.trackDao()
+                        .findByPlaylistIdOrderByPopularity(playlist.id, artists)
+                }
                 adapter.updateData(_tracks)
             }
         } catch (error: SpotifyAPIError) {

@@ -1,8 +1,8 @@
 package es.unex.giiis.asee.spotifilter.api
 
+import es.unex.giiis.asee.spotifilter.data.api.albums.SpotifyPagedSet
 import es.unex.giiis.asee.spotifilter.data.api.tracks.SpotifyPlaylist
 import es.unex.giiis.asee.spotifilter.data.api.SpotifySearchResponse
-import es.unex.giiis.asee.spotifilter.data.api.albums.SpotifyPagedSet
 import es.unex.giiis.asee.spotifilter.data.api.tracks.SpotifyTrack
 import es.unex.giiis.asee.spotifilter.data.api.tracks.SpotifyTracks
 import okhttp3.OkHttpClient
@@ -24,12 +24,6 @@ private val service: SpotifyAPI by lazy {
 fun getSpotifyAPIService() = service
 
 interface SpotifyAPI {
-
-    @GET("v1/albums/{id}/tracks")
-    suspend fun getSpotifyAlbumTracks(
-        @Header("Authorization") authorization: String,
-        @Path("id") id: String
-    ): SpotifyTracks
 
     @GET("v1/browse/new-releases")
     suspend fun getSpotifyNewReleases(
@@ -54,6 +48,12 @@ interface SpotifyAPI {
         @Header("Authorization") authorization: String,
         @Path("id") id: String
     ): SpotifyTrack
+
+    @GET("v1/albums/{id}/tracks")
+    suspend fun getSpotifyAlbumTracks(
+        @Header("Authorization") authorization: String,
+        @Path("id") id: String
+    ): SpotifyTracks
 
 }
 

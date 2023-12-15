@@ -4,11 +4,11 @@ import es.unex.giiis.asee.spotifilter.api.SpotifyAPIError
 import es.unex.giiis.asee.spotifilter.api.SpotifyAccountsError
 import es.unex.giiis.asee.spotifilter.api.getSpotifyAPIService
 import es.unex.giiis.asee.spotifilter.api.getSpotifyAccountsService
+import es.unex.giiis.asee.spotifilter.data.api.albums.SpotifyAlbum
 import es.unex.giiis.asee.spotifilter.data.api.SpotifyAuthorization
+import es.unex.giiis.asee.spotifilter.data.api.albums.SpotifyPagedSet
 import es.unex.giiis.asee.spotifilter.data.api.tracks.SpotifyPlaylist
 import es.unex.giiis.asee.spotifilter.data.api.SpotifySearchResponse
-import es.unex.giiis.asee.spotifilter.data.api.albums.SpotifyAlbum
-import es.unex.giiis.asee.spotifilter.data.api.albums.SpotifyPagedSet
 import es.unex.giiis.asee.spotifilter.data.api.tracks.SpotifyTrack
 import es.unex.giiis.asee.spotifilter.data.api.tracks.SpotifyTracks
 import es.unex.giiis.asee.spotifilter.data.model.Album

@@ -35,7 +35,7 @@ class AddTrackToPlaylistFragment : Fragment() {
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?
+        savedInstanceState: Bundle?
     ): View {
         _binding = FragmentAddTrackToPlaylistBinding
             .inflate(inflater, container, false)
@@ -86,7 +86,7 @@ class AddTrackToPlaylistFragment : Fragment() {
     private suspend fun addTrackToPlaylist(playlist: Playlist) {
         val track = args.track
         if (database.playlistTrackDao()
-                .findByPlaylistIdAndTrackId(playlist.id!!, track.id) != null
+            .findByPlaylistIdAndTrackId(playlist.id!!, track.id) != null
         ) {
             Toast.makeText(context, "'${playlist.name}' already contains '${track.name}'",
                 Toast.LENGTH_SHORT).show()
