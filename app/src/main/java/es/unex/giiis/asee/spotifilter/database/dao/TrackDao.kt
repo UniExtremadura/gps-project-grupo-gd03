@@ -1,4 +1,4 @@
-package es.unex.giiis.asee.spotifilter.database
+package es.unex.giiis.asee.spotifilter.database.dao
 
 import androidx.room.Dao
 import androidx.room.Delete

@@ -8,6 +8,10 @@ import es.unex.giiis.asee.spotifilter.data.model.Playlist
 import es.unex.giiis.asee.spotifilter.data.model.PlaylistTrack
 import es.unex.giiis.asee.spotifilter.data.model.Track
 import es.unex.giiis.asee.spotifilter.data.model.User
+import es.unex.giiis.asee.spotifilter.database.dao.PlaylistDao
+import es.unex.giiis.asee.spotifilter.database.dao.PlaylistTrackDao
+import es.unex.giiis.asee.spotifilter.database.dao.TrackDao
+import es.unex.giiis.asee.spotifilter.database.dao.UserDao
 
 @Database(entities = [User::class, Playlist::class, Track::class, PlaylistTrack::class], version = 1)
 abstract class SpotiFilterDatabase : RoomDatabase() {
