@@ -3,14 +3,10 @@ package es.unex.giiis.asee.spotifilter
 import es.unex.giiis.asee.spotifilter.data.api.SpotifyArtist
 import es.unex.giiis.asee.spotifilter.data.api.SpotifySearchResponse
 import es.unex.giiis.asee.spotifilter.data.api.albums.SpotifyAlbum
-<<<<<<< HEAD
 import es.unex.giiis.asee.spotifilter.data.api.albums.SpotifyAlbums
-import es.unex.giiis.asee.spotifilter.data.api.albums.SpotifyImage
-=======
 import es.unex.giiis.asee.spotifilter.data.api.albums.SpotifyImage
 import es.unex.giiis.asee.spotifilter.data.api.tracks.SpotifyTrack
 import es.unex.giiis.asee.spotifilter.data.api.tracks.SpotifyTracks
->>>>>>> origin/develop
 import org.junit.Test
 import org.junit.Assert.assertEquals
 
@@ -27,7 +23,6 @@ class SpotifySearchResponseUnitTest {
 
     @Test
     fun checkSpotifySearchResponseFields() {
-<<<<<<< HEAD
         val albumsValue = SpotifyAlbums(listOf(
             SpotifyAlbum(
                 listOf(SpotifyArtist("Fred again.."), SpotifyArtist("Baby Keem")),
@@ -39,7 +34,6 @@ class SpotifySearchResponseUnitTest {
                 "2023-12-08"
             )
         ))
-=======
         val tracksValue = SpotifyTracks(listOf(
             SpotifyTrack(
             SpotifyAlbum(
@@ -60,7 +54,6 @@ class SpotifySearchResponseUnitTest {
         val spotifySearchResponse = SpotifySearchResponse(albumsValue, tracksValue)
         assertFieldEquals("tracks", tracksValue, spotifySearchResponse)
         assertFieldEquals("albums", albumsValue, spotifySearchResponse)
->>>>>>> origin/develop
     }
 
 }
