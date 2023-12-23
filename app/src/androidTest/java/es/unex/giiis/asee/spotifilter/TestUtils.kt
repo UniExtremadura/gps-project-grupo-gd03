@@ -111,6 +111,29 @@ object TestUtils {
 
     }
 
+    fun performLogIn(username: String, password: String) {
+
+        performSignUp(username, password)
+
+        val materialButton = onView(
+            allOf(
+                withId(R.id.logInButton1), withText("Log in"),
+                childAtPosition(
+                    childAtPosition(
+                        withClassName(`is`("androidx.constraintlayout.widget.ConstraintLayout")),
+                        0
+                    ),
+                    5
+                ),
+                isDisplayed()
+            )
+        )
+        materialButton.perform(click())
+
+        Thread.sleep(1000)
+
+    }
+
     private fun childAtPosition(
         parentMatcher: Matcher<View>, position: Int
     ): Matcher<View> {
