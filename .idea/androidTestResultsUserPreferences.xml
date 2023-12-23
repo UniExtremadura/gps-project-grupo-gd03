@@ -3,14 +3,23 @@
   <component name="AndroidTestResultsUserPreferences">
     <option name="androidTestResultsTableState">
       <map>
+<<<<<<< HEAD
         <entry key="127622973">
+=======
+        <entry key="410656670">
+>>>>>>> origin/develop
           <value>
             <AndroidTestResultsTableState>
               <option name="preferredColumnWidths">
                 <map>
                   <entry key="Duration" value="90" />
+<<<<<<< HEAD
                   <entry key="Tests" value="360" />
                   <entry key="Xiaomi POCOPHONE F1" value="120" />
+=======
+                  <entry key="Pixel_3a_API_31" value="120" />
+                  <entry key="Tests" value="360" />
+>>>>>>> origin/develop
                 </map>
               </option>
             </AndroidTestResultsTableState>
