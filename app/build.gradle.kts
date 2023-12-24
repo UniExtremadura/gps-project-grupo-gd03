@@ -61,4 +61,7 @@ dependencies {
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.11")
     implementation("com.github.bumptech.glide:glide:5.0.0-rc01")
+    implementation( "org.seleniumhq.selenium:selenium-java:3.141.59")
+    implementation ("io.github.bonigarcia:webdrivermanager:5.1.1")
+
 }
